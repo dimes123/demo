@@ -1,0 +1,17 @@
+.close-icon {
+  transition: 800ms ease-in-out;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+
+.close-button {
+  float: right;
+  top: -24px;
+  right: -24px;
+  outline: none;
+}
+.full-width {
+  width: 100%;
+}

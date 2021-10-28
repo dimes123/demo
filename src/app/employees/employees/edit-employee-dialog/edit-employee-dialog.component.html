@@ -1,0 +1,49 @@
+<button [mat-dialog-close]="true" class="close-button" mat-icon-button>
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+
+<h3>Edit employee</h3>
+<form (ngSubmit)="submit()" [formGroup]="employeeEditForm" class="w-100">
+  <div class="form-row pb-1">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-label>Employee name</mat-label>
+        <input formControlName="employee_name" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form-row pb-1">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-label>Employee salary</mat-label>
+        <input formControlName="employee_salary" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form-row pb-1">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-label>Employee age</mat-label>
+        <input formControlName="employee_age" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form-row pb-1">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-label>Profile image</mat-label>
+        <input formControlName="profile_image" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button
+    [disabled]="!employeeEditForm.valid"
+    class="float-right"
+    color="warn"
+    mat-flat-button
+    type="submit"
+  >
+    Save
+  </button>
+</form>
